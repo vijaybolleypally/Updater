@@ -1,4 +1,4 @@
-import annotation.TestID;
+import annotation.TestProperties;
 import listener.TestIDListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -6,6 +6,7 @@ import services.GSheets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.testng.annotations.Test;
 
 public class TestClass {
@@ -31,18 +32,18 @@ public class TestClass {
 //        gSheets.setSheetData("1BjmK9mdaHxvUXcsvkm4GZUoiQjEnVbW13DHVZfvm7WI", "Home!A17:B17", writeValues);
 //    }
 
-    @TestID("TC_LG_1")
+    @TestProperties(testID = "myTest_ID1")
     @Test
-    public void myTest1(){
+    public void myTest1() {
         System.out.println("myTest1");
 
     }
 
-    @TestID("TC_LG_2")
+    @TestProperties(testID = "myTest_ID2")
     @Test
-    public void myTest2(){
+    public void myTest2() {
         System.out.println("myTest2");
-        Assert.assertEquals(1,2);
+        Assert.assertEquals(1, 2);
     }
 
 }
